@@ -10,7 +10,7 @@
 
         /*hay anotaciones que solo sirven para cambiar la forma en que se va a visualizar este campo_
          pero hay anotaciones que cambian la estructura del campo como por ejemplo el tamaño del mismo*/
-        [MaxLength(50)]//50 caracteres maximo
+        [MaxLength(50,ErrorMessage = "The field {0} only contain {1} characters length.")]//50 caracteres maximo,personalizamos el error que desplegara
         [Required]//si queremos que el campo sea obligatorio o sea diferente a null
         public string Name { get; set; }//nombre del producto
 
